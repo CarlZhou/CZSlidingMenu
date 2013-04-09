@@ -14,15 +14,8 @@
     UIColor *backgroundColor;
     UIView *swipeLeftView;
     UIView *swipeRightView;
-    
-    UISwipeGestureRecognizer *swipeLeft;
-    UISwipeGestureRecognizer *swipeRight;
     void (^swipeLeftActionHandler)(void);
     void (^swipeRightActionHandler)(void);
-    
-    
-    
-    
     CGPoint touchStartPoint;
 }
 

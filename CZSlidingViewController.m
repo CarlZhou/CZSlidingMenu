@@ -39,7 +39,7 @@ static NSString *cellIdentifier = @"CZSlidingMenuCell";
 //    
 //    self.menuData = [NSMutableArray array];
     
-    slidingMenu = [[CZSlidingMenu alloc] initWithFrame:CGRectMake(20, 20, 200, 60)];
+    slidingMenu = [[CZSlidingMenu alloc] initWithFrame:CGRectMake(0, 20, 320, 60)];
     [slidingMenu setMenuTitle:@"testMenu"];
     [self.view addSubview:slidingMenu];
     

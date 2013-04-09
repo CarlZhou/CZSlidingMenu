@@ -19,21 +19,17 @@
         
         [self setMultipleTouchEnabled:YES];
         
-//        swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipeLeft:)];
-//        swipeLeft.direction = UISwipeGestureRecognizerDirectionLeft;
-//        swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipeRight:)];
-//        swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
-//        
-//        [self addGestureRecognizer:swipeLeft];
-//        [self addGestureRecognizer:swipeRight];
-        
         menuTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
         menuTitleLabel.textAlignment = NSTextAlignmentCenter;
         menuTitleLabel.backgroundColor = [UIColor clearColor];
         [self addSubview:menuTitleLabel];
         
-        swipeLeftView = [[UIView alloc] initWithFrame:CGRectMake(0 - self.frame.size.width*2, 0, self.frame.size.width*2, self.frame.size.height)];
-        swipeLeftView.backgroundColor = [UIColor greenColor];
+        swipeRightView = [[UIView alloc] initWithFrame:CGRectMake(0 - self.frame.size.width, 0, self.frame.size.width, self.frame.size.height)];
+        swipeRightView.backgroundColor = [UIColor greenColor];
+        [self addSubview:swipeRightView];
+        
+        swipeLeftView = [[UIView alloc] initWithFrame:CGRectMake(self.frame.size.width, 0, self.frame.size.width, self.frame.size.height)];
+        swipeLeftView.backgroundColor = [UIColor yellowColor];
         [self addSubview:swipeLeftView];
         
         self.clipsToBounds = YES;
@@ -43,15 +39,6 @@
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
-
 @synthesize swipeLeftActionHandler, swipeRightActionHandler;
 
 #pragma mark - Cell layout
@@ -60,22 +47,6 @@
 {
     menuTitleLabel.text = title;
 }
-
-//#pragma mark - Swipe Action
-//
-//- (void)didSwipeLeft:(UISwipeGestureRecognizer *)recognizer
-//{
-//    if (swipeLeftActionHandler)
-//        swipeLeftActionHandler();
-//    NSLog(@"did swipe left");
-//}
-//
-//- (void)didSwipeRight:(UISwipeGestureRecognizer *)recognize
-//{
-//    if (swipeRightActionHandler)
-//        swipeRightActionHandler();
-//    NSLog(@"did swipe right");
-//}
 
 #pragma mark - Touches
 
@@ -87,15 +58,6 @@
         UITouch *touch = obj;
         CGPoint touchPoint = [touch locationInView:self];
         touchStartPoint = touchPoint;
-        
-        
-        
-        //        // Draw a red circle where the touch occurred
-        //        UIView *touchView = [[UIView alloc] init];
-        //        [touchView setBackgroundColor:[UIColor redColor]];
-        //        touchView.frame = CGRectMake(touchPoint.x, touchPoint.y, 30, 30);
-        //        touchView.layer.cornerRadius = 15;
-        //        [self addSubview:touchView];
     }];
 
 }
@@ -107,18 +69,55 @@
         UITouch *touch = obj;
         CGPoint touchPoint = [touch locationInView:self];
         
-        CGFloat touchLeftLength = touchPoint.x - touchStartPoint.x;
-        
-        [swipeLeftView setFrame:CGRectMake(-self.frame.size.width*2 + touchLeftLength, swipeLeftView.frame.origin.y, swipeLeftView.frame.size.width, swipeLeftView.frame.size.height)];
-        
+        CGFloat touchRightLength = touchPoint.x - touchStartPoint.x;
+        CGFloat touchLeftLength = touchStartPoint.x - touchPoint.x;
         
         
-//        // Draw a red circle where the touch occurred
-//        UIView *touchView = [[UIView alloc] init];
-//        [touchView setBackgroundColor:[UIColor redColor]];
-//        touchView.frame = CGRectMake(touchPoint.x, touchPoint.y, 30, 30);
-//        touchView.layer.cornerRadius = 15;
-//        [self addSubview:touchView];
+        if (touchRightLength > self.frame.size.width)
+        {
+            [swipeRightView setFrame:CGRectMake(0, swipeRightView.frame.origin.y, swipeRightView.frame.size.width, swipeRightView.frame.size.height)];
+            [menuTitleLabel setFrame:CGRectMake(self.frame.size.width, menuTitleLabel.frame.origin.y, menuTitleLabel.frame.size.width, menuTitleLabel.frame.size.height)];
+        }
+        else
+        {
+            [swipeRightView setFrame:CGRectMake(-self.frame.size.width + touchRightLength, swipeRightView.frame.origin.y, swipeRightView.frame.size.width, swipeRightView.frame.size.height)];
+            [menuTitleLabel setFrame:CGRectMake(touchRightLength, menuTitleLabel.frame.origin.y, menuTitleLabel.frame.size.width, menuTitleLabel.frame.size.height)];
+        }
+        
+        if (touchRightLength > (self.frame.size.width * 3/4))
+        {
+            swipeRightView.backgroundColor = [UIColor orangeColor];
+        }
+        else if(touchRightLength < (self.frame.size.width * 1/4))
+        {
+            swipeRightView.backgroundColor = [UIColor lightGrayColor];
+        }
+        else
+        {
+            swipeRightView.backgroundColor = [UIColor greenColor];
+        }
+        
+        if (touchLeftLength > self.frame.size.width)
+        {
+            [swipeLeftView setFrame:CGRectMake(0, swipeLeftView.frame.origin.y, swipeLeftView.frame.size.width, swipeLeftView.frame.size.height)];
+        }
+        else
+        {
+            [swipeLeftView setFrame:CGRectMake(self.frame.size.width - touchLeftLength, swipeLeftView.frame.origin.y, swipeLeftView.frame.size.width, swipeLeftView.frame.size.height)];
+        }
+        
+        if (touchLeftLength > (self.frame.size.width * 3/4))
+        {
+            swipeLeftView.backgroundColor = [UIColor brownColor];
+        }
+        else if (touchLeftLength < (self.frame.size.width * 1/4))
+        {
+            swipeLeftView.backgroundColor = [UIColor lightGrayColor];
+        }
+        else
+        {
+            swipeLeftView.backgroundColor = [UIColor yellowColor];
+        }
     }];
 }
 
@@ -131,8 +130,14 @@
         CGPoint touchPoint = [touch locationInView:self];
         
         CGFloat touchLength = touchPoint.x - touchStartPoint.x;
-
-        [swipeLeftView setFrame:CGRectMake(0 - self.frame.size.width*2, swipeLeftView.frame.origin.y, swipeLeftView.frame.size.width, swipeLeftView.frame.size.height)];
+        
+        [swipeRightView setFrame:CGRectMake(0 - self.frame.size.width, swipeRightView.frame.origin.y, swipeRightView.frame.size.width, swipeRightView.frame.size.height)];
+        swipeRightView.backgroundColor = [UIColor greenColor];
+        
+        [swipeLeftView setFrame:CGRectMake(self.frame.size.width, swipeLeftView.frame.origin.y, swipeLeftView.frame.size.width, swipeLeftView.frame.size.height)];
+        swipeLeftView.backgroundColor = [UIColor yellowColor];
+        
+        [menuTitleLabel setFrame:CGRectMake(0, menuTitleLabel.frame.origin.y, menuTitleLabel.frame.size.width, menuTitleLabel.frame.size.height)];
         
     }];
 }
