@@ -2,13 +2,8 @@ CZSlidingMenu
 =============
 [![](https://dl.dropbox.com/s/a9nsuiy78vha59k/iOS%20Simulator%20Screen%20shot%202013-05-20%2011.21.15%20PM.png)](https://dl.dropbox.com/s/a9nsuiy78vha59k/iOS%20Simulator%20Screen%20shot%202013-05-20%2011.21.15%20PM.png)
 [![](https://dl.dropboxusercontent.com/s/6dl5txtm6dby87j/iOS%20Simulator%20Screen%20shot%202013-05-20%2011.21.17%20PM.png)](https://dl.dropboxusercontent.com/s/6dl5txtm6dby87j/iOS%20Simulator%20Screen%20shot%202013-05-20%2011.21.17%20PM.png)
-
-[![](http://dl.dropbox.com/s/nlgygyetwwtvgfm/ToastButton004-thumb.png)](http://dl.dropbox.com/s/g33bj7c12m299ad/ToastButton004.png)
-[![](http://dl.dropbox.com/s/hn2wfn297tumm1n/ToastButton005-thumb.png)](http://dl.dropbox.com/s/bgsp6gz6mi0kjdn/ToastButton005.png)
-[![](http://dl.dropbox.com/s/grjvhek5mmkzbr7/ToastButton006-thumb.png)](http://dl.dropbox.com/s/74eptaupxckufuz/ToastButton006.png)
-[![](http://dl.dropbox.com/s/j83nea6morgygl5/ToastButton007-thumb.png)](http://dl.dropbox.com/s/dey1uw0kr2u5zbc/ToastButton007.png)
-[![](http://dl.dropbox.com/s/4jf1gmde3rs1m8n/ToastButton008-thumb.png)](http://dl.dropbox.com/s/t4p5zxdz3f580x7/ToastButton008.png)
-[![](http://dl.dropbox.com/s/rmrvbdwh81bj0i1/ToastButton009-thumb.png)](http://dl.dropbox.com/s/ozv0kgazgbcb1eo/ToastButton009.png)
+[![](https://dl.dropbox.com/s/ni8wql6x76ky5be/iOS%20Simulator%20Screen%20shot%202013-05-20%2011.21.18%20PM.png)](https://dl.dropbox.com/s/ni8wql6x76ky5be/iOS%20Simulator%20Screen%20shot%202013-05-20%2011.21.18%20PM.png)
+[![](https://dl.dropbox.com/s/kn77gzbi2460yas/iOS%20Simulator%20Screen%20shot%202013-05-20%2011.21.20%20PM.png)](https://dl.dropbox.com/s/kn77gzbi2460yas/iOS%20Simulator%20Screen%20shot%202013-05-20%2011.21.20%20PM.png)
 
 ## Intro
 
