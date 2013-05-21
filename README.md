@@ -31,7 +31,7 @@ You will need LLVM 3.0 or later in order to build ToastButton.
 
 Directly add the `CZSlidingMenu.h` and `CZSlidingMenu.m` source files to your project.
 
-1. Download the [latest code version](https://github.com/carlWattpad/ToastButton/archive/master.zip) or add the repository as a git submodule to your git-tracked project. 
+1. Download the [latest code version](https://github.com/carlWattpad/CZSlidingMenu/archive/master.zip) or add the repository as a git submodule to your git-tracked project. 
 2. Open your project in Xcode, than drag and drop `CZSlidingMenu.h` and `CZSlidingMenu.m` onto your project (use the "Product Navigator view"). Make sure to select Copy items when asked if you extracted the code archive outside of your project. 
 3. Include CZSlidingMenu wherever you need it with `#import "CZSlidingMenu.h"`.
 
