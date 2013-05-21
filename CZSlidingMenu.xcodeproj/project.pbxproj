@@ -17,16 +17,17 @@
 		C3125F921713560500F913A9 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3125F911713560500F913A9 /* Default@2x.png */; };
 		C3125F941713560500F913A9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3125F931713560500F913A9 /* Default-568h@2x.png */; };
 		C3125F971713560500F913A9 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3125F951713560500F913A9 /* MainStoryboard_iPhone.storyboard */; };
-		C3125F9A1713560500F913A9 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3125F981713560500F913A9 /* MainStoryboard_iPad.storyboard */; };
 		C3125FA51713560500F913A9 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3125FA41713560500F913A9 /* SenTestingKit.framework */; };
 		C3125FA61713560500F913A9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3125F7D1713560400F913A9 /* UIKit.framework */; };
 		C3125FA71713560500F913A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3125F7F1713560400F913A9 /* Foundation.framework */; };
 		C3125FAF1713560500F913A9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3125FAD1713560500F913A9 /* InfoPlist.strings */; };
 		C3125FB21713560500F913A9 /* CZSlidingMenuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C3125FB11713560500F913A9 /* CZSlidingMenuTests.m */; };
 		C3125FBE1713576200F913A9 /* CZSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3125FBD1713576200F913A9 /* CZSlidingViewController.m */; };
-		C3125FC11713594600F913A9 /* CZSlidingMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3125FC01713594500F913A9 /* CZSlidingMenuCell.m */; };
-		C357FE96171361BC00825B5C /* CZSlidingMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = C357FE95171361BC00825B5C /* CZSlidingMenu.m */; };
 		C357FE98171366EE00825B5C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C357FE97171366EE00825B5C /* QuartzCore.framework */; };
+		FC3079F3174B1DF4006CA402 /* CZSlidingMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3079F2174B1DF4006CA402 /* CZSlidingMenu.m */; };
+		FC3079F4174B1DF4006CA402 /* CZSlidingMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3079F2174B1DF4006CA402 /* CZSlidingMenu.m */; };
+		FC3079F7174B1E5B006CA402 /* UIUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3079F6174B1E5B006CA402 /* UIUtil.m */; };
+		FC3079F8174B1E5B006CA402 /* UIUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3079F6174B1E5B006CA402 /* UIUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +55,6 @@
 		C3125F911713560500F913A9 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		C3125F931713560500F913A9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		C3125F961713560500F913A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		C3125F991713560500F913A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		C3125FA31713560500F913A9 /* CZSlidingMenuTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CZSlidingMenuTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3125FA41713560500F913A9 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		C3125FAC1713560500F913A9 /* CZSlidingMenuTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CZSlidingMenuTests-Info.plist"; sourceTree = "<group>"; };
@@ -63,11 +63,11 @@
 		C3125FB11713560500F913A9 /* CZSlidingMenuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CZSlidingMenuTests.m; sourceTree = "<group>"; };
 		C3125FBC1713576200F913A9 /* CZSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZSlidingViewController.h; sourceTree = "<group>"; };
 		C3125FBD1713576200F913A9 /* CZSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZSlidingViewController.m; sourceTree = "<group>"; };
-		C3125FBF1713594500F913A9 /* CZSlidingMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZSlidingMenuCell.h; sourceTree = "<group>"; };
-		C3125FC01713594500F913A9 /* CZSlidingMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZSlidingMenuCell.m; sourceTree = "<group>"; };
-		C357FE94171361BC00825B5C /* CZSlidingMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZSlidingMenu.h; sourceTree = "<group>"; };
-		C357FE95171361BC00825B5C /* CZSlidingMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZSlidingMenu.m; sourceTree = "<group>"; };
 		C357FE97171366EE00825B5C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FC3079F1174B1DF4006CA402 /* CZSlidingMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZSlidingMenu.h; sourceTree = "<group>"; };
+		FC3079F2174B1DF4006CA402 /* CZSlidingMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZSlidingMenu.m; sourceTree = "<group>"; };
+		FC3079F5174B1E5B006CA402 /* UIUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIUtil.h; sourceTree = "<group>"; };
+		FC3079F6174B1E5B006CA402 /* UIUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,10 +130,11 @@
 		C3125F831713560400F913A9 /* CZSlidingMenuDemo */ = {
 			isa = PBXGroup;
 			children = (
+				FC3079F5174B1E5B006CA402 /* UIUtil.h */,
+				FC3079F6174B1E5B006CA402 /* UIUtil.m */,
 				C3125F8C1713560500F913A9 /* AppDelegate.h */,
 				C3125F8D1713560500F913A9 /* AppDelegate.m */,
 				C3125F951713560500F913A9 /* MainStoryboard_iPhone.storyboard */,
-				C3125F981713560500F913A9 /* MainStoryboard_iPad.storyboard */,
 				C3125F841713560500F913A9 /* Supporting Files */,
 			);
 			name = CZSlidingMenuDemo;
@@ -176,12 +177,10 @@
 		C3125FBB1713572B00F913A9 /* CZSlidingMenu */ = {
 			isa = PBXGroup;
 			children = (
+				FC3079F1174B1DF4006CA402 /* CZSlidingMenu.h */,
+				FC3079F2174B1DF4006CA402 /* CZSlidingMenu.m */,
 				C3125FBC1713576200F913A9 /* CZSlidingViewController.h */,
 				C3125FBD1713576200F913A9 /* CZSlidingViewController.m */,
-				C3125FBF1713594500F913A9 /* CZSlidingMenuCell.h */,
-				C3125FC01713594500F913A9 /* CZSlidingMenuCell.m */,
-				C357FE94171361BC00825B5C /* CZSlidingMenu.h */,
-				C357FE95171361BC00825B5C /* CZSlidingMenu.m */,
 			);
 			name = CZSlidingMenu;
 			sourceTree = "<group>";
@@ -262,7 +261,6 @@
 				C3125F921713560500F913A9 /* Default@2x.png in Resources */,
 				C3125F941713560500F913A9 /* Default-568h@2x.png in Resources */,
 				C3125F971713560500F913A9 /* MainStoryboard_iPhone.storyboard in Resources */,
-				C3125F9A1713560500F913A9 /* MainStoryboard_iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,8 +298,8 @@
 				C3125F8A1713560500F913A9 /* main.m in Sources */,
 				C3125F8E1713560500F913A9 /* AppDelegate.m in Sources */,
 				C3125FBE1713576200F913A9 /* CZSlidingViewController.m in Sources */,
-				C3125FC11713594600F913A9 /* CZSlidingMenuCell.m in Sources */,
-				C357FE96171361BC00825B5C /* CZSlidingMenu.m in Sources */,
+				FC3079F3174B1DF4006CA402 /* CZSlidingMenu.m in Sources */,
+				FC3079F7174B1E5B006CA402 /* UIUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +308,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3125FB21713560500F913A9 /* CZSlidingMenuTests.m in Sources */,
+				FC3079F4174B1DF4006CA402 /* CZSlidingMenu.m in Sources */,
+				FC3079F8174B1E5B006CA402 /* UIUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,14 +338,6 @@
 				C3125F961713560500F913A9 /* en */,
 			);
 			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		C3125F981713560500F913A9 /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C3125F991713560500F913A9 /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		C3125FAD1713560500F913A9 /* InfoPlist.strings */ = {
@@ -425,6 +417,7 @@
 				INFOPLIST_FILE = "CZSlidingMenu/CZSlidingMenu-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -437,6 +430,7 @@
 				INFOPLIST_FILE = "CZSlidingMenu/CZSlidingMenu-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -7,15 +7,13 @@
 //
 
 #import "CZSlidingViewController.h"
-#import "CZSlidingMenuCell.h"
+#import "UIUtil.h"
 
 @interface CZSlidingViewController ()
 
 @end
 
 @implementation CZSlidingViewController
-
-static NSString *cellIdentifier = @"CZSlidingMenuCell";
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,64 +29,36 @@ static NSString *cellIdentifier = @"CZSlidingMenuCell";
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-//    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
-//    
-//    self.tableView.delegate = self;
-//    self.tableView.dataSource = self;
-//    [self.view addSubview:self.tableView];
-//    
-//    self.menuData = [NSMutableArray array];
-    
-    slidingMenu = [[CZSlidingMenu alloc] initWithFrame:CGRectMake(0, 20, 320, 60)];
-    [slidingMenu setMenuTitle:@"testMenu"];
+    slidingMenu = [[CZSlidingMenu alloc] initWithFrame:CGRectMake(0, (self.view.frame.size.height - 60)/2, self.view.frame.size.width, 60)];
     [self.view addSubview:slidingMenu];
     
+    [slidingMenu setMenuTitle:@"swipe me!"];
+    
+    [slidingMenu setSwipeRightViewTitle:@"swipe right"];
+    [slidingMenu setSwipeRightActionHandler:^{
+        [UIUtil showAlertWithTitle:@"Swipe Right Block invoked" andMessage:nil];
+    }];
+    
+    [slidingMenu setSwipeMoreRightViewTitle:@"long swipe right"];
+    [slidingMenu setSwipeMoreRightActionHandler:^{
+        [UIUtil showAlertWithTitle:@"Long Swipe Right Block invoked" andMessage:nil];
+    }];
+    
+    [slidingMenu setSwipeLeftViewTitle:@"swipe left"];
+    [slidingMenu setSwipeLeftActionHandler:^{
+        [UIUtil showAlertWithTitle:@"Swipe Left Block invoked" andMessage:nil];
+    }];
+    
+    [slidingMenu setSwipeMoreLeftViewTitle:@"long swipe left"];
+    [slidingMenu setSwipeMoreLeftActionHandler:^{
+        [UIUtil showAlertWithTitle:@"Long Swipe Left Block invoked" andMessage:nil];
+    }];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - table view delegate
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-//    return self.menuData.count;
-    return 1;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    CZSlidingMenuCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    
-    if (!cell)
-    {
-        cell = [[CZSlidingMenuCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-    }
-    
-    [cell setMenuTitle:@"testMenu"];
-    
-    [cell setSwipeLeftActionHandler:^{
-        NSLog(@"Did swipe left");
-    }];
-    
-    [cell setSwipeRightActionHandler:^{
-        NSLog(@"Did swipe right");
-    }];
-    
-    return cell;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 44;
 }
 
 @end

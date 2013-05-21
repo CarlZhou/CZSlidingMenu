@@ -9,12 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "CZSlidingMenu.h"
 
-@interface CZSlidingViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+@interface CZSlidingViewController : UIViewController
 {
     CZSlidingMenu *slidingMenu;
 }
-
-@property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) NSMutableArray *menuData;
 
 @end
